@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UpdateProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_2sdp"
+                android:layout_margin="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/updateCoverImage"
+                        android:src="@drawable/profilehint"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_130sdp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                        <ImageButton
+                            android:id="@+id/addCoverImageBtn"
+                            android:src="@drawable/add_image_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:background="@drawable/oval_bg"
+                            android:padding="@dimen/_5sdp"
+                            app:layout_constraintTop_toTopOf="@id/updateCoverImage"
+                            app:layout_constraintEnd_toEndOf="@id/updateCoverImage"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/updateProfileImage"
+                        android:src="@drawable/profilehint"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:padding="@dimen/_7sdp"
+                        app:civ_border_width="@dimen/_1sdp"
+                        app:civ_border_color="@color/bio_color"
+                        app:layout_constraintStart_toStartOf="@id/updateCoverImage"
+                        app:layout_constraintEnd_toEndOf="@id/updateCoverImage"
+                        app:layout_constraintTop_toBottomOf="@id/updateCoverImage"
+                        app:layout_constraintBottom_toBottomOf="@id/updateCoverImage"/>
+
+                    <ImageView
+                        android:id="@+id/addProfileImageBtn"
+                        android:src="@drawable/add_image_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintHorizontal_bias=".9"
+                        app:layout_constraintStart_toStartOf="@id/updateProfileImage"
+                        app:layout_constraintEnd_toEndOf="@id/updateProfileImage"
+                        app:layout_constraintBottom_toBottomOf="@id/updateProfileImage"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/profileName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/edit_text_back"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:drawableLeft="@drawable/name"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/orange_500"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileCard"/>
+
+            <EditText
+                android:id="@+id/profilePhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/edit_text_back"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/orange_500"
+                android:includeFontPadding="false"
+                android:inputType="phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileName"/>
+
+            <EditText
+                android:id="@+id/profileEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/edit_text_back"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/orange_500"
+                android:editable="false"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profilePhone"/>
+
+            <EditText
+                android:id="@+id/profilePassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/edit_text_back"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/orange_500"
+                android:editable="false"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileEmail"/>
+
+            <EditText
+                android:id="@+id/profileBio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/edit_text_back"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:drawableLeft="@drawable/bio"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/orange_500"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profilePassword"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upadateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:fontFamily="@font/poppins"
+                android:text="Save Change"
+                android:textSize="@dimen/_12ssp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/submit_btn_back"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileBio"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

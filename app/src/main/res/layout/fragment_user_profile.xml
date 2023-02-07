@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UserProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_2sdp"
+                android:layout_margin="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/coverImage"
+                        android:src="@drawable/profilehint"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_130sdp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:src="@drawable/profilehint"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        app:civ_border_width="@dimen/_1sdp"
+                        app:civ_border_color="@color/bio_color"
+                        app:layout_constraintStart_toStartOf="@id/coverImage"
+                        app:layout_constraintEnd_toEndOf="@id/coverImage"
+                        app:layout_constraintTop_toBottomOf="@id/coverImage"
+                        app:layout_constraintBottom_toBottomOf="@id/coverImage"/>
+
+
+                    <TextView
+                        android:id="@+id/profileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile Name"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppins"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/profile_person"
+                        android:drawablePadding="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:includeFontPadding="false"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/profileImage"/>
+
+                    <TextView
+                        android:id="@+id/profilePhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01610000000"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_11ssp"
+                        android:fontFamily="@font/poppins"
+                        android:drawableLeft="@drawable/profile_phone"
+                        android:drawablePadding="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:includeFontPadding="false"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/profileName"/>
+
+                    <TextView
+                        android:id="@+id/profileEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ssample@gmail.com"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_11ssp"
+                        android:fontFamily="@font/poppins"
+                        android:drawableLeft="@drawable/profile_email"
+                        android:drawablePadding="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:includeFontPadding="false"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/profilePhone"/>
+
+                    <TextView
+                        android:id="@+id/profileBioTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="I am a simple person"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_11ssp"
+                        android:drawableStart="@drawable/profilebio"
+                        android:drawablePadding="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:includeFontPadding="false"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/profileEmail"
+                        />
+
+                    <TextView
+                        android:id="@+id/friends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Friends"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/text_color"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/sends"
+                        app:layout_constraintTop_toBottomOf="@id/profileBioTV"/>
+
+                    <TextView
+                        android:id="@+id/friendsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/candal"
+                        android:textColor="@color/bio_color"
+                        android:textSize="@dimen/_13ssp"
+                        android:text="100"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/friends"
+                        app:layout_constraintEnd_toEndOf="@id/friends"
+                        app:layout_constraintTop_toBottomOf="@id/friends"/>
+
+                    <TextView
+                        android:id="@+id/sends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Sends"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/text_color"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:layout_constraintStart_toEndOf="@id/friends"
+                        app:layout_constraintEnd_toStartOf="@id/receives"
+                        app:layout_constraintTop_toBottomOf="@id/profileBioTV"/>
+
+                    <TextView
+                        android:id="@+id/sendsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/candal"
+                        android:textColor="@color/bio_color"
+                        android:textSize="@dimen/_13ssp"
+                        android:text="1000"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/sends"
+                        app:layout_constraintEnd_toEndOf="@id/sends"
+                        app:layout_constraintTop_toBottomOf="@id/sends"/>
+
+                    <TextView
+                        android:id="@+id/receives"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Receives"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/text_color"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:layout_constraintStart_toEndOf="@id/sends"
+                        app:layout_constraintTop_toBottomOf="@id/profileBioTV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/receivesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/candal"
+                        android:textColor="@color/bio_color"
+                        android:textSize="@dimen/_13ssp"
+                        android:text="1000"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/receives"
+                        app:layout_constraintEnd_toEndOf="@id/receives"
+                        app:layout_constraintTop_toBottomOf="@id/receives"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/settingCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_7sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileCard">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/friendsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/friendIcon"
+                            android:src="@drawable/friends"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:padding="@dimen/_2sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Friends"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_color"
+                            android:layout_marginHorizontal="@dimen/_7sdp"
+                            app:layout_constraintStart_toEndOf="@id/friendIcon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/friendSettingBtn"
+                            android:src="@drawable/arrow"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notificationCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/friendsCard">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/notificationIcon"
+                            android:src="@drawable/notifications"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:padding="@dimen/_2sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notifications"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_color"
+                            android:layout_marginHorizontal="@dimen/_7sdp"
+                            app:layout_constraintStart_toEndOf="@id/notificationIcon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/notificationSettingBtn"
+                            android:src="@drawable/arrow"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/myFilesCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/notificationCard">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/myFilesIcon"
+                            android:src="@drawable/myfiles"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:padding="@dimen/_2sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Files"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/text_color"
+                            android:layout_marginHorizontal="@dimen/_7sdp"
+                            app:layout_constraintStart_toEndOf="@id/myFilesIcon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/myFilesSettingBtn"
+                            android:src="@drawable/arrow"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/inviteFriendCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/myFilesCard">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/inviteFriendIcon"
+                            android:src="@drawable/invitefriend"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:scaleType="centerCrop"
+                            android:layout_margin="@dimen/_3sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_7sdp"
+                            android:text="Invite Friend"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/inviteFriendIcon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/inviteFriendSettingBtn"
+                            android:src="@drawable/arrow"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/inviteFriendCard"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logoutCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:padding="@dimen/_2sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/settingCard"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logoutIcon"
+                        android:src="@drawable/logout"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/logoutText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/poppins"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        app:layout_constraintStart_toEndOf="@id/logoutIcon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
